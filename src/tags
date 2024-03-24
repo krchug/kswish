@@ -1,0 +1,144 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BLK_SIZE	kswish_types.h	27;"	d
+CON_Q	kswish_queue.h	/^	CON_Q		=	3,$/;"	e	enum:kswish_q_type
+ECANNOTBEUSED	kswish_types.h	26;"	d
+EOK	kswish_types.h	25;"	d
+KSWISH_CRC	kswish_crc.h	8;"	d
+KSWISH_DATA	kswish_headers.h	/^	KSWISH_DATA	= 2,$/;"	e	enum:kswish_header_type_e
+KSWISH_HDRS	kswish_headers.h	9;"	d
+KSWISH_INT_H	kswish_internal_hash.h	9;"	d
+KSWISH_LOG	kswish_log.h	9;"	d
+KSWISH_LOG_ERROR	kswish_log.h	15;"	d
+KSWISH_LOG_INFO	kswish_log.h	14;"	d
+KSWISH_META	kswish_headers.h	/^	KSWISH_META	= 1,$/;"	e	enum:kswish_header_type_e
+KSWISH_MR	kswish_master_record.h	9;"	d
+KSWISH_MR_MAX_CNT	kswish_master_record.h	27;"	d
+KSWISH_MR_SIZE	kswish_master_record.h	26;"	d
+KSWISH_NA	kswish_headers.h	/^	KSWISH_NA	= 3,$/;"	e	enum:kswish_header_type_e
+KSWISH_Q	kswish_queue.h	9;"	d
+KSWISH_SS	kswish_subsystem_start.h	10;"	d
+KSWISH_THR	kswish_threads.h	9;"	d
+KSWISH_TYPES	kswish_types.h	9;"	d
+MAX_HASH_BUCKET	kswish_internal_hash.h	20;"	d
+META_MAJ_NO	kswish_headers.h	20;"	d
+META_MIN_NO	kswish_headers.h	21;"	d
+NET_CON_Q	kswish_queue.h	/^	NET_CON_Q	=	4,$/;"	e	enum:kswish_q_type
+NET_PROD_Q	kswish_queue.h	/^	NET_PROD_Q	=	2,$/;"	e	enum:kswish_q_type
+PROD_Q	kswish_queue.h	/^	PROD_Q		= 	1,$/;"	e	enum:kswish_q_type
+SA	kswish_threads.h	16;"	d
+SUP_MAJ_NO	kswish_headers.h	15;"	d
+SUP_MINOR_NO	kswish_headers.h	16;"	d
+SUP_STR	kswish_headers.h	17;"	d
+SUP_STR_LEN	kswish_headers.h	18;"	d
+blk_number	kswish_master_record.h	/^	uint64_t blk_number;		\/\/Block number of the block in the sequence$/;"	m	struct:kswish_master_record
+blocks	kswish_headers.h	/^	int			blocks;					\/\/how many meta blocks$/;"	m	struct:kswish_metadata_header_s
+blocks	poc.c	14;"	d	file:
+blocks_toexpect	kswish_headers.h	/^	int			blocks_toexpect;			\/\/how many blocks to expect$/;"	m	struct:kswish_data_header_s
+condition	kswish_queue.h	/^	pthread_cond_t	  condition;	\/\/Conditional variable guarding the q$/;"	m	struct:kswish_q_st
+consumer_queue	kswish_queue.h	/^kswish_q_st consumer_queue;		\/\/Create a queue from which the target will read the blocks$/;"	v
+consumer_thr	kswish_threads.c	/^void *consumer_thr(void *vargp)$/;"	f
+consumer_thr_tid	kswish_subsystem_start.h	/^pthread_t consumer_thr_tid, net_consumer_thr_tid;$/;"	v
+count	kswish_queue.h	/^	uint32_t 	  count;	\/\/Count of elements in the queue$/;"	m	struct:kswish_q_st
+crc	kswish_crc.h	/^	uint32_t crc;			\/\/We are using crc32. This will be actual crc$/;"	m	struct:crc_pair
+crc_pair	kswish_crc.h	/^typedef struct crc_pair {$/;"	s
+crc_pair	kswish_crc.h	/^} crc_pair;$/;"	t	typeref:struct:crc_pair
+crc_return_from_base	kswish_crc.c	/^int crc_return_from_base(const char *buf, size_t len, crc_pair *crc)$/;"	f
+data	kswish_queue.h	/^	char data[4096];	\/\/Block$/;"	m	struct:kswish_q_s
+disk1size	poc.c	12;"	d	file:
+docker_file	poc.c	11;"	d	file:
+first_free_entry	kswish_master_record.h	/^	uint64_t first_free_entry;	\/\/First free entry in the current master block$/;"	m	struct:kswish_master_record_meta
+free_entries	kswish_master_record.h	/^	uint64_t free_entries;		\/\/free entries left$/;"	m	struct:kswish_master_record_meta
+hash	kswish_internal_hash.h	/^	uint64_t hash;				\/\/THe complete hash$/;"	m	struct:kswish_internal_hash
+head	kswish_queue.h	/^	struct kswish_q_s *head;	\/\/For each queue maintain the head$/;"	m	struct:kswish_q_st	typeref:struct:kswish_q_st::kswish_q_s
+header	kswish_headers.h	/^	kswish_header_type_et	header;					\/\/next header to expect$/;"	m	struct:kswish_supreme_header_s
+init_supreme_header	kswish_headers.c	/^static void init_supreme_header(kswish_supreme_header_st *hdr)$/;"	f	file:
+internal_hash	kswish_internal_hash.h	/^kswish_internal_hash	internal_hash[MAX_HASH_BUCKET];$/;"	v
+ip	kswish_subsystem_start.h	/^	char ip[16];$/;"	m	struct:ip_info
+ip_info	kswish_subsystem_start.h	/^typedef struct ip_info {$/;"	s
+ip_info	kswish_subsystem_start.h	/^}ip_info;$/;"	t	typeref:struct:ip_info
+kswish_create_master_record_block	kswish_master_record.c	/^int kswish_create_master_record_block(kswish_master_record **master_record, kswish_master_record_meta **metadata)$/;"	f
+kswish_data_header_s	kswish_headers.h	/^typedef struct kswish_data_header_s {$/;"	s
+kswish_data_header_st	kswish_headers.h	/^} kswish_data_header_st;$/;"	t	typeref:struct:kswish_data_header_s
+kswish_hash_add_check	kswish_internal_hash.c	/^int kswish_hash_add_check(crc_pair pair, uint64_t pba, kswish_unique_return *id)$/;"	f
+kswish_hash_clear	kswish_internal_hash.c	/^int kswish_hash_clear()$/;"	f
+kswish_hash_init	kswish_internal_hash.c	/^void kswish_hash_init()$/;"	f
+kswish_header_type_e	kswish_headers.h	/^typedef enum kswish_header_type_e {$/;"	g
+kswish_header_type_et	kswish_headers.h	/^} kswish_header_type_et;$/;"	t	typeref:enum:kswish_header_type_e
+kswish_id	kswish_log.c	/^static int kswish_id;$/;"	v	file:
+kswish_insert_in_master_record	kswish_master_record.c	/^int kswish_insert_in_master_record(kswish_master_record *master_record, $/;"	f
+kswish_internal_hash	kswish_internal_hash.h	/^typedef struct kswish_internal_hash {$/;"	s
+kswish_internal_hash	kswish_internal_hash.h	/^} kswish_internal_hash;$/;"	t	typeref:struct:kswish_internal_hash
+kswish_log_fp	kswish_log.c	/^FILE *kswish_log_fp;$/;"	v
+kswish_master_record	kswish_master_record.h	/^typedef struct kswish_master_record {$/;"	s
+kswish_master_record	kswish_master_record.h	/^} kswish_master_record;$/;"	t	typeref:struct:kswish_master_record
+kswish_master_record_meta	kswish_master_record.h	/^typedef struct kswish_master_record_meta {$/;"	s
+kswish_master_record_meta	kswish_master_record.h	/^} kswish_master_record_meta;$/;"	t	typeref:struct:kswish_master_record_meta
+kswish_metadata_header_s	kswish_headers.h	/^typedef struct kswish_metadata_header_s {$/;"	s
+kswish_metadata_header_st	kswish_headers.h	/^} kswish_metadata_header_st;$/;"	t	typeref:struct:kswish_metadata_header_s
+kswish_print_time	kswish_log.c	/^char* kswish_print_time()$/;"	f
+kswish_q_add	kswish_queue.c	/^int kswish_q_add(kswish_q_s *node, kswish_q_type type)$/;"	f
+kswish_q_add_master_record	kswish_queue.c	/^int kswish_q_add_master_record(kswish_q_s *node, kswish_q_type type)$/;"	f
+kswish_q_init	kswish_queue.c	/^int kswish_q_init(kswish_q_type type)$/;"	f
+kswish_q_node_create	kswish_queue.c	/^int kswish_q_node_create(kswish_q_s **node)$/;"	f
+kswish_q_remove	kswish_queue.c	/^int kswish_q_remove(kswish_q_type type, kswish_q_s **return_node)$/;"	f
+kswish_q_s	kswish_queue.h	/^typedef struct kswish_q_s {$/;"	s
+kswish_q_s	kswish_queue.h	/^} kswish_q_s;$/;"	t	typeref:struct:kswish_q_s
+kswish_q_st	kswish_queue.h	/^typedef struct kswish_q_st {$/;"	s
+kswish_q_st	kswish_queue.h	/^} kswish_q_st;$/;"	t	typeref:struct:kswish_q_st
+kswish_q_type	kswish_queue.h	/^typedef enum kswish_q_type {$/;"	g
+kswish_q_type	kswish_queue.h	/^}kswish_q_type;$/;"	t	typeref:enum:kswish_q_type
+kswish_recieve_data	kswish_headers.c	/^int kswish_recieve_data(int sockfd)$/;"	f
+kswish_recieve_metadata	kswish_headers.c	/^int kswish_recieve_metadata(int sockfd)$/;"	f
+kswish_ret_q	kswish_queue.c	/^static kswish_q_st* kswish_ret_q (kswish_q_type type)$/;"	f	file:
+kswish_send_data	kswish_headers.c	/^int kswish_send_data(kswish_q_s *node, int sockfd, int blocks)$/;"	f
+kswish_send_metadata	kswish_headers.c	/^int kswish_send_metadata(kswish_q_s *node, int sockfd)$/;"	f
+kswish_start_client_on_producer	kswish_threads.c	/^static int kswish_start_client_on_producer(ip_info *info)$/;"	f	file:
+kswish_start_server_on_consumer	kswish_threads.c	/^static int kswish_start_server_on_consumer(ip_info *info)$/;"	f	file:
+kswish_subsystem_start_source	kswish_subsystem_start.c	/^int kswish_subsystem_start_source(ip_info info)$/;"	f
+kswish_subsystem_start_target	kswish_subsystem_start.c	/^int kswish_subsystem_start_target(ip_info info)$/;"	f
+kswish_subsystem_stop_source	kswish_subsystem_start.c	/^int kswish_subsystem_stop_source()$/;"	f
+kswish_subsystem_stop_target	kswish_subsystem_start.c	/^int kswish_subsystem_stop_target()$/;"	f
+kswish_supreme_header_s	kswish_headers.h	/^typedef struct kswish_supreme_header_s {$/;"	s
+kswish_supreme_header_st	kswish_headers.h	/^} kswish_supreme_header_st;$/;"	t	typeref:struct:kswish_supreme_header_s
+kswish_unique_return	kswish_internal_hash.h	/^typedef struct kswish_unique_return {$/;"	s
+kswish_unique_return	kswish_internal_hash.h	/^} kswish_unique_return;$/;"	t	typeref:struct:kswish_unique_return
+kswishlog	kswish_log.c	/^void kswishlog(int priority, char* filename, int line, char *fmt,...)$/;"	f
+lba	kswish_master_record.h	/^	uint64_t lba;			\/\/Logical block number$/;"	m	struct:kswish_master_record
+lock	kswish_log.c	/^pthread_mutex_t lock=PTHREAD_MUTEX_INITIALIZER; $/;"	v
+lock	kswish_queue.h	/^	pthread_mutex_t	  lock;		\/\/Lock guarding the conditional variable$/;"	m	struct:kswish_q_st
+main	main.c	/^int main ()$/;"	f
+main	poc.c	/^int main ()$/;"	f
+main	source.c	/^int main ()$/;"	f
+main	target.c	/^int main ()$/;"	f
+major_number	kswish_headers.h	/^	int			major_number;				\/\/major number$/;"	m	struct:kswish_data_header_s
+major_number	kswish_headers.h	/^	int			major_number;				\/\/major number$/;"	m	struct:kswish_metadata_header_s
+minor_number	kswish_headers.h	/^	int 			minor_number;				\/\/minor number$/;"	m	struct:kswish_data_header_s
+minor_number	kswish_headers.h	/^	int 			minor_number;				\/\/minor number$/;"	m	struct:kswish_metadata_header_s
+net_consume_queue	kswish_queue.h	/^kswish_q_st net_consume_queue;		\/\/Create a queue where from the network the data is recieved$/;"	v
+net_consumer_thr	kswish_threads.c	/^void *net_consumer_thr(void *vargp)$/;"	f
+net_consumer_thr_tid	kswish_subsystem_start.h	/^pthread_t consumer_thr_tid, net_consumer_thr_tid;$/;"	v
+net_produce_queue	kswish_queue.h	/^kswish_q_st net_produce_queue;		\/\/Create a queue from on which our system will produce blocks and net system will send it$/;"	v
+net_producer_thr	kswish_threads.c	/^void *net_producer_thr(void *vargp)$/;"	f
+net_producer_thr_tid	kswish_subsystem_start.h	/^pthread_t producer_thr_tid, net_producer_thr_tid;$/;"	v
+next	kswish_internal_hash.h	/^	struct kswish_internal_hash *next;	\/\/Next pointer to enable chaining$/;"	m	struct:kswish_internal_hash	typeref:struct:kswish_internal_hash::kswish_internal_hash
+next	kswish_queue.h	/^	struct kswish_q_s *next; \/\/Next pointer$/;"	m	struct:kswish_q_s	typeref:struct:kswish_q_s::kswish_q_s
+pba	kswish_internal_hash.h	/^	uint64_t 	pba;			\/\/This is valid only when the block is not unique, else its 0$/;"	m	struct:kswish_unique_return
+pba	kswish_internal_hash.h	/^	uint64_t pba;				\/\/Physical block number in the queue$/;"	m	struct:kswish_internal_hash
+port	kswish_subsystem_start.h	/^	int port;$/;"	m	struct:ip_info
+producer_queue	kswish_queue.h	/^kswish_q_st producer_queue;		\/\/Create a queue on which the user will put the blocks$/;"	v
+producer_thr	kswish_threads.c	/^void *producer_thr(void *vargp)$/;"	f
+producer_thr_tid	kswish_subsystem_start.h	/^pthread_t producer_thr_tid, net_producer_thr_tid;$/;"	v
+rear	kswish_queue.h	/^	struct kswish_q_s *rear;	\/\/For each queue maintain the rear$/;"	m	struct:kswish_q_st	typeref:struct:kswish_q_st::kswish_q_s
+reduced_crc	kswish_crc.h	/^	uint32_t reduced_crc;		\/\/This will be the reduced crc which is crc%256$/;"	m	struct:crc_pair
+sup_id_str	kswish_headers.h	/^	char 			sup_id_str[SUP_STR_LEN];		\/\/id string$/;"	m	struct:kswish_supreme_header_s
+sup_major_number	kswish_headers.h	/^	int 			sup_major_number;			\/\/Major number$/;"	m	struct:kswish_supreme_header_s
+sup_minor_number	kswish_headers.h	/^	int 			sup_minor_number;			\/\/Minor number$/;"	m	struct:kswish_supreme_header_s
+unique	kswish_internal_hash.h	/^	bool		unique;			\/\/IF true the block is unique and added to hash, if False, its not unique and we return the pba$/;"	m	struct:kswish_unique_return
+validate_data_header	kswish_headers.c	/^static int validate_data_header(kswish_data_header_st *meta)$/;"	f	file:
+validate_meta_header	kswish_headers.c	/^static int validate_meta_header(kswish_metadata_header_st *meta)$/;"	f	file:
+validate_supreme_header	kswish_headers.c	/^static int validate_supreme_header(kswish_supreme_header_st *sup)$/;"	f	file:

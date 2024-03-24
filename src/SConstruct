@@ -1,0 +1,14 @@
+env = Environment()
+env.Append(CCFLAGS = '-g')
+
+common = ['kswish_headers.h','kswish_log.h','kswish_queue.h','kswish_threads.h','kswish_crc.c','kswish_internal_hash.c','kswish_master_record.c','kswish_subsystem_start.c','kswish_types.h','kswish_crc.h','kswish_internal_hash.h','kswish_master_record.h','kswish_subsystem_start.h','kswish_headers.c','kswish_log.c','kswish_queue.c','kswish_threads.c']
+
+source_files = common + ['source.c']
+target_files = common + ['target.c']
+poc_files = common + ['poc.c']
+
+env.Program('source', source_files, parse_flags='-lz -lpthread')
+env.Program('target', target_files, parse_flags='-lz -lpthread')
+env.Program('poc', poc_files, parse_flags='-lz -lpthread')
+
+
