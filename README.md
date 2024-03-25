@@ -39,3 +39,15 @@ Total unique blocks 50436 which amounts to 197MB of data
 
 Total dedupe blocks 2555 which amounts to 9MB of data
 ~~~
+
+## Use source and target programs for poc
+
+~~~[.sh]
+sudo ./source
+sudo ./target
+~~~
+
+The source program generates 256 blocks with one unique block. IT then adds
+it to the process queue, when it is handed to the network queue, it is handed
+over as one master block and one unique block instead of 256 blocks.
+
